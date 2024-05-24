@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCM2.0</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head> 
+    <title>
+        Home Page
+    </title>
 </head>
-<body>
-    <div class=" bg-gray-200 w-1/2 p-4 mx-auto mt-4">
-        <h1 class="text-2xl font-bold" data-th-text="${name}"></h1>
-        <h1>Welcome to home page</h1> 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse incidunt voluptate dolorem accusamus facere! Aspernatur nostrum et illum nihil natus!</p>
+<body> 
+    <div id = "content">
+        <h1>Welcome to Home page </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script>console.log("Home  Page");</script>
+
 </body>
 </html>

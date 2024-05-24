@@ -1,26 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head> 
+    <title>
+        About Page
+    </title>
 </head>
-<body>
-    <h2>This is about page</h2>
-    <hr />
-    <div class="host-tag" th:replace="${isLogin} ? ~{base :: parent(~{::section})} : ~{base :: test(~{::#not_logged_in})}">
-        <section>
-            <h1>User is LoggedIN </h1>
-            <h2>this is dynamic content</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, sunt.
-            </p>
-            <button>Click me</button>
-        </section>
-
-        <section id = "not_logged_in">
-            <h1> User is not loggedin</h1>
-        </section>
+<body> 
+    <div id = "content">
+        <h1>Welcome to about page </h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
     </div>
+    <script>console.log("About Page");</script>
+    <script>console.log("Second ");</script>
 </body>
 </html>
